@@ -1,0 +1,4 @@
+import Link from 'next/link';
+const base='https://raw.githubusercontent.com/siteadrielly/SiteV2/main/public/img/resultados/';
+const cases=[['rino-01.webp','Rinomodelação'],['rino-02.webp','Rinomodelação'],['rino-03.webp','Rinomodelação'],['rino-04.webp','Rinomodelação'],['rino-05.webp','Rinomodelação'],['facetas-01.webp','Facetas'],['facetas-02.webp','Facetas'],['botox-testa-01.webp','Toxina botulínica']];
+export default function Resultados(){return <main><div className="results-page"><div className="container"><Link href="/" className="back">← Voltar</Link><p className="eyebrow">ACERVO CLÍNICO</p><h1 className="serif">Resultados que respeitam <i>proporções.</i></h1><p className="page-lead">Uma seleção de casos para observar técnica, equilíbrio e naturalidade.</p><div className="case-grid">{cases.map(([src,title])=><article key={src}><img src={base+src} alt={title}/><span>{title}</span></article>)}</div></div></div></main>}

@@ -1,3 +1,50 @@
 import Link from "next/link";
-const image="https://raw.githubusercontent.com/siteadrielly/SiteV2/main/public/img/smile-portrait.webp";
-export default function NotFound(){return <main className="min-h-screen bg-[#171714] text-white grid md:grid-cols-2"><section className="flex flex-col justify-center px-[8vw] py-28"><p className="text-[10px] tracking-[.24em] uppercase text-[#b29a6a]">404 · Página não encontrada</p><span className="block w-12 h-px bg-[#b29a6a] my-6"/><h1 className="serif text-5xl md:text-7xl leading-[1.02] font-normal max-w-xl">Nem todo caminho leva ao lugar certo.</h1><p className="mt-7 max-w-md text-white/65 leading-7 text-sm">A página que você tentou acessar não existe ou mudou de endereço. Mas o cuidado com a sua beleza continua no caminho certo.</p><div className="flex flex-wrap gap-3 mt-9"><Link className="btn btn-olive" href="/">Voltar para a home <span>↗</span></Link><a className="btn text-white border-white/40" href="https://wa.me/5583993222422">Agendar avaliação <span>↗</span></a></div></section><section className="relative min-h-[52vh] md:min-h-screen overflow-hidden"><img src={image} alt="Dra. Adriely Anute" className="absolute inset-0 w-full h-full object-cover object-[60%_25%]"/><div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10"/><div className="absolute bottom-8 left-8 tracking-[.2em] text-[10px]">DRA. ADRIELY ANUTE<br/><span className="text-white/55 tracking-[.12em]">Harmonização Facial · Estética Avançada</span></div></section></main>}
+
+const image = "https://raw.githubusercontent.com/siteadrielly/SiteV2/main/public/img/smile-portrait.webp";
+
+export default function NotFound() {
+  return (
+    <main className="notfound-v3">
+      <section className="notfound-copy">
+        <div className="notfound-topline">
+          <Link href="/" className="notfound-brand">ADRIELY ANUTE</Link>
+          <span>HARMONIZAÇÃO · ESTÉTICA AVANÇADA</span>
+        </div>
+
+        <div className="notfound-center">
+          <p className="eyebrow">404 · Página não encontrada</p>
+          <div className="notfound-rule" />
+          <div className="notfound-number serif">404</div>
+          <h1 className="serif">Você saiu do caminho.</h1>
+          <p>
+            Esta página não existe ou mudou de endereço. Volte para o início e continue
+            sua jornada de cuidado, beleza e naturalidade.
+          </p>
+          <div className="notfound-actions">
+            <Link href="/" className="btn btn-olive">Voltar para a home <span>↗</span></Link>
+            <a href="https://wa.me/5583993222422" className="btn notfound-outline">Agendar avaliação <span>↗</span></a>
+          </div>
+        </div>
+
+        <div className="notfound-bottom">
+          <span>JOÃO PESSOA · PB</span>
+          <span>© ADRIELY ANUTE</span>
+        </div>
+      </section>
+
+      <section className="notfound-image">
+        <img src={image} alt="Dra. Adriely Anute" />
+        <div className="notfound-image-shade" />
+        <div className="notfound-image-label">
+          <span>01</span>
+          <div>
+            <strong>BELEZA COM INTENÇÃO</strong>
+            <small>Realce sua beleza. Preserve quem você é.</small>
+          </div>
+        </div>
+        <span className="notfound-corner top-left" />
+        <span className="notfound-corner bottom-right" />
+      </section>
+    </main>
+  );
+}
